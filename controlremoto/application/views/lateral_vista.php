@@ -1,0 +1,9 @@
+<a href="<?php echo URL."admin/vistaAdmin"; ?>">Artículos</a>
+<a href="<?php echo URL."noticia/todasNoticias"; ?>">Noticias</a>
+<a href="<?php echo URL."concierto/todosConciertos"; ?>">Conciertos</a>
+<a href="<?php echo URL."disco/todosLosDiscos"; ?>">Discos</a>
+<a href="<?php echo URL."cancion/todasLasCanciones"; ?>">Canciones</a>
+<a href="<?php echo URL."video/todosLosVideos"; ?>">Vídeos</a>
+<a href="<?php echo URL."imagen/todasLasImagenes"; ?>">Imágenes</a>
+<a href="<?php echo URL."galeria/todasGalerias"; ?>">Galerías</a>
+<a href="<?php echo URL."admin/cerrar_sesion"; ?>">Cerrar sesión</a>

@@ -1,0 +1,12 @@
+@media screen and (min-width: 1350px){
+	#section_left{
+		width: 13.6%;
+	}
+	#section_right{
+		width: 85.1%;
+	}
+	#dentro{
+		width: 84%;
+		height: 107%;
+	}
+}

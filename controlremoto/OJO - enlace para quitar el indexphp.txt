@@ -1,0 +1,3 @@
+http://www.galisteocantero.com/activar-modulo-mod_rewrite-de-apache-en-linux-y-windows/
+
+El archivo .htaccess ya está modificado

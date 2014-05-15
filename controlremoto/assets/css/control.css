@@ -1,0 +1,315 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+body{
+	height: 100%;
+	width: 100%;
+}
+@font-face{
+	font-family: fuente1;
+	src: url('fonts/TravelingTypewriter.otf') format('embedded-opentype'),
+			url('fonts/TravelingTypewriter.ttf') format('truetype');
+	
+}
+header{
+	width: 100%;
+	position: absolute;
+	height: 15%;
+	background-color: #5c1996;
+}
+header h1{
+	text-align: center;
+	margin-top: 1em;
+	margin-bottom: 1em;
+	font-size: 2em;
+	color: white;
+	font-family: fuente1;
+}
+section{
+	width: 100%;
+	display: table;
+}
+#sec{
+	position: absolute;
+	top: 15%;
+	background-color: black;
+	height: 85%;
+}
+fieldset{
+	margin-top: 1em;
+	margin-left: 25em;
+	background-color: white;
+	width: 40%;
+	height: 10%;
+	border-radius: 5px;
+	padding: 1em;
+}
+aside{
+	width: 15%;
+	position: absolute;
+	top: 15%;
+	height: 85%;
+	display: table-cell;
+	background-color: black;
+}
+label{
+	font-family: fuente1;
+	font-size: 1em;
+}
+#asideh{
+	position: absolute;
+	top: 15%;
+}
+aside a{
+	color: white;
+	text-decoration: none;
+	font-size: 1em;	
+	margin-left: 0.5em;
+	padding: 0.5em;
+	font-family: fuente1;
+	display: block;
+}
+aside a:hover{
+	background-color: #490b7f;
+	opacity: 0.5;
+}
+article{
+	position: absolute;
+	top: 15%;
+	left: 15%;
+	padding-left: 2em;
+	padding-top: 2em;
+}
+table{
+	margin-top: 2em;
+}
+table td{
+	padding: 0.5em;
+}
+article p, a{
+	font-size: 1.2em;
+	font-family: fuente1;
+}
+article a:hover{
+	text-decoration: none;
+}
+#nuevaentrada{
+	text-decoration: none;
+	background-color: #bebac1;
+	border: solid 1px black;
+	color: black;
+	padding: 0.3em;
+	font-family: fuente1;
+}
+#nuevacancion{
+	text-decoration: none;
+	background-color: red;
+	color: white;
+	font-family: fuente1;
+	padding: 0em 0.5em 0em 0.5em;
+	border-radius: 25px;
+}
+#nuevaentrada:hover{
+	color: white;
+	border-color: white;
+}
+#nuevacancion:hover{
+	background-color: white;
+	color: red;
+}
+#titulo{
+	width: 100%;
+}
+textarea{
+	width: 100%;
+}
+.custom-input-file {
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+}
+.custom-input-file .input-file {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    font-size: 10000px;
+    border: 10000px solid transparent;
+    opacity: 0;
+    filter: alpha(opacity=0);
+    position: absolute;
+    right: -1000px;
+    top: -1000px;
+    cursor: pointer;
+}
+.imgfile{
+	width: 5%;
+}
+.clr{
+	clear: both;
+}
+#botoncete{
+	float: left;
+}
+#bodylogin{
+	background-color: black;
+}
+#registrofield{
+	width: 10%;
+	margin-top: 5em;
+	margin-left: 30em;
+}
+#registrofield table td{
+	background-color: #5c1996;
+}
+#registrofield label, #registrofield p{
+	color: white;
+}
+#h1login{
+	color: #5c1996;
+	text-align: center;
+	font-size: 1.5em;
+	font-family: fuente1;
+}
+#h1logof{
+	text-align: center;
+	font-size: 1.5em;
+	font-family: fuente1;
+	color: white;
+}
+#aviso{
+	font-family: fuente1;
+	margin-top: 5em;
+	margin-left: 15em;
+}
+input[type="submit"]{
+	font-family: fuente1;
+	font-size: 1em;
+}
+#volver{
+	float: right;
+	font-size: 1em;
+	font-family: fuente1;
+	text-decoration: none;
+	-webkit-appearance: push-button;
+	-webkit-user-select: none;
+	white-space: pre;
+	align-items: flex-start;
+	text-align: center;
+	cursor: default;
+	color: buttontext;
+	padding: 2px 6px 3px;
+	border: 2px outset buttonface;
+	border-image-source: initial;
+	border-image-slice: initial;
+	border-image-width: initial;
+	border-image-outset: initial;
+	border-image-repeat: initial;
+	background-color: buttonface;
+	box-sizing: border-box;
+}
+#volverin{
+	font-size: 1em;
+	font-family: fuente1;
+	text-decoration: none;
+	-webkit-appearance: push-button;
+	-webkit-user-select: none;
+	white-space: pre;
+	align-items: flex-start;
+	text-align: center;
+	cursor: default;
+	color: buttontext;
+	padding: 2px 3px 2px 3px;
+	border: 2px outset buttonface;
+	border-image-source: initial;
+	border-image-slice: initial;
+	border-image-width: initial;
+	border-image-outset: initial;
+	border-image-repeat: initial;
+	background-color: buttonface;
+	box-sizing: border-box;
+}
+#volver:hover, #volverin:hover{
+	border-color: white;
+}
+article img{
+	width: 75px;
+	float: left;
+	margin: 10px;
+	border: 1px solid black;
+}
+article img:hover{
+	width: 150px;
+}
+.inputtotal{
+	width: 100%;
+}
+.yesno, .lista{
+	width: 1.2em;
+	border: none;
+	float: none;
+	margin: 0;
+}
+.lista{
+	width: 1.3em;
+	vertical-align:bottom;
+}
+.yesno:hover, .lista:hover{
+	width: 1.2em;
+}
+table td p, table td a{
+	text-align: center;
+}
+#aceptar{
+	float: left;
+}
+textarea{
+	text-align: left;
+}
+#field{
+	height:auto;
+}
+.altstyle{
+	text-align: center;
+	color: black;
+	font-size: 0.7em;
+}
+#field img{
+	width: 75px;
+	border: solid 1px black;
+}
+input[type=text],textarea,input[type=number],select{
+	font-family: fuente1;
+}
+strong{
+	font-family: fuente1;
+	font-size: 1.22em;
+	color: #5700EF;
+}
+.paginacion{
+	margin-top: 1em;
+	float: right;
+}
+.paginacion a{
+	padding: 0.5em;
+	color: #5700EF;
+}
+.paginacion a:hover{
+	color: black;
+}

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="utf-8" />
+		<title>Prueba vistas dos</title>
+		<link rel="stylesheet" type="text/css" href="../../assets/css/control.css">
+		<script>
+			function cambiar(){
+				if(document.getElementById("archivo").value!=""){
+					var archivo=document.getElementById("archivo").value;
+					document.getElementById("archivo").value="";
+					var texto="<img src='"+archivo+"'>";
+					document.getElementById("textillo").value+=texto;
+				}
+			}
+			function ver(){
+				var texto = "<p>" + document.getElementById("textillo").value + "</p>";
+				texto = texto.replace(/\n/g, "<br>");
+				var ventana = window.open("","","width=200,height=100");
+				ventana.document.write(texto);
+			}
+			function modificar(){
+				var texto = "<p>" + document.getElementById("textillo").value + "</p>";
+				texto = texto.replace(/\n/g, "<br>");
+				document.getElementById("textillo").value = texto;
+			}
+			function confirma(){
+				confirm("Vas a borrar este artículo. ¿Estás seguro?");
+			}
+		</script>
+	</head>
+
+	<body>
+		<header>
+			<h1>Artículo</h1>
+		</header>
+		<section id="sec">
+			<form action="" method="post">
+				<fieldset>
+					<label for="idarticulo">ID</label>
+					<br>
+					<input type="number" id="idarticulo" name="idarticulo" disabled>
+					<br>
+					<label for="titulo">Título</label>
+					<br>
+					<input type="text" id="titulo" name="titulo">
+					<br>
+					<button type="button" id= "botoncete" onclick="ver();">HTML</button>
+					<div class="custom-input-file">
+						<input type="file" id="archivo" class="input-file">
+					    <img src="../../assets/img/index-img-icon.png" id="imgfile">
+					</div>
+					<div class="clr"></div>
+					<label for="contenido">Asunto:</label>
+					<br>
+					<textarea rows="20" id="textillo" onfocus="cambiar();" name="textillo"></textarea>
+					<br>
+					<label for="fecha">Introduce la fecha</label>
+					<br>
+					<input type="date" id="fecha" name="fecha">
+					<br><br>
+					<label for="publicar">¿Publicar?</label>
+					<input type="radio" name="publicar" value="1" required><label>Sí</label>
+					<input type="radio" name="publicar" value="0"><label>No</label><br>
+					<label for="destacado">¿Destacado?</label>
+					<input type="radio" name="destacado" value="1" required><label>Sí</label>
+					<input type="radio" name="destacado" value="0"><label>No</label>
+					<br><br>
+					<a href="" id="volver">Volver</a>
+					<input type="submit" id="aceptar" value="Aceptar" onclick="modificar();">
+					<form action="" method="post">
+						<input type="hidden"  name="neoid">
+					<input type="submit" value="Borrar" onclick="confirma();">
+					</form>
+				</fieldset>
+			</form>
+		</section>
+	</body>
+</html>
