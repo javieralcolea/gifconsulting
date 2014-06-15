@@ -1,0 +1,189 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+body{
+	height: 100%;
+	width: 100%;
+}
+h1,h2,h3,h4,p,a,label,input,select{
+	font-family: Tahoma;
+}
+header p{
+	float: right;
+	margin-top: 1em;
+	margin-right: 2em;
+}
+header b{
+	color: red;
+}
+#campo1,#campo2,#campo6{
+	width: 25%;
+	float: left;
+	border: solid 1px #b20a93;
+	padding: 2em;
+	margin-top: 2em;
+}
+#campo3{
+	width: 25%;
+	float: left;
+	border: solid 1px #b20a93;
+	padding: 2em;
+	margin-left: 8em;
+}
+#campo4{
+	width: 85%;
+	float: left;
+	border: solid 1px #b20a93;
+	padding: 2em;
+	margin-left: 2em;
+}
+#campo4 table td label{
+}
+#campo5{
+	width: 70%;
+	float: left;
+	border: solid 1px #b20a93;
+	padding: 2em;
+	margin-left: 4em;
+	margin-top: 2em;
+}
+#campo5 table{
+	width: 100%;
+}
+#campo1 h1,#campo2 h1,#campo3 h1,#campo4 h1,#campo5 h1,#campo6 h1{
+	font-size: 1.5em;
+	text-align: center;
+}
+#campo1{
+	margin-left: 8em;
+	margin-right: 4em;
+}
+#campo6{
+	margin-left: 27em;
+}
+#incorrecto{
+	color: red;
+}
+aside{
+	float: left;
+	width: 10%;
+	padding-top: 2em;
+}
+aside a{
+	padding-left: 1em;
+	padding-bottom: 1em;
+	padding-top: 1em;
+	display: block;
+	text-decoration: none;
+	background-color: #b20a93;
+	color: white;
+	border: solid 1px white;
+}
+aside a:hover{
+	color: #b20a93;
+	background-color: white;
+	
+}
+.clr{
+	clear: both;
+}
+#seccion{
+	padding-top: 3em;
+	width: 90%;
+	float: right;
+}
+#secuno,#secdos{
+	width: 50%;
+	overflow-x: auto;
+}
+#secuno{
+	float: left;
+}
+#secdos{
+	float: right;
+}
+#secuno h1,#secdos h1{
+	text-align: center;
+	color: #b20a93;
+	font-size: 1.2em;
+	margin-bottom: 1em;
+}
+#secuno a,#secdos a{
+	display: block;
+	padding: 0.5em;
+	text-decoration: none;
+	background-color: #e0dbdb;
+	color: black;
+	border: solid 1px white;
+}
+#secuno a:hover,#secdos a:hover{
+	color: white;
+}
+.centrado{
+	text-align: center;
+}
+#tableuser{
+	margin-left: 8em;
+	margin-top: 3em;
+}
+#tableuser td{
+	border: solid 1px black;
+	padding: 0.5em;
+	background-color: #e0dbdb;
+}
+#tableuser p, #tableuser a{
+	text-align: center;
+	text-decoration: none;
+	color: black;
+}
+#tableuser a:hover{
+	color: white;
+}
+.inputtotal{
+	width: 100%;
+}
+.nuevous{
+	margin-left: 8em;
+	margin-top: 3em;
+	text-decoration: none;
+	color: white;
+	background-color: black;
+	padding: 1em;
+}
+.nuevous:hover{
+	color: black;
+	background-color: white;
+	border: solid 1px black;
+}
+#ocultouno,#ocultodos{
+	display: none;
+}
+#volver{
+	background-color: #EFEFEF;
+	font-size: 0.8em;
+	color: black;
+	text-decoration: none;
+	border: 1px solid gray;
+	padding: 0.2em 0.6em 0.2em 0.6em;
+	border-radius: 3px;
+}
+#volver:hover{
+	border-radius: 0px;
+}

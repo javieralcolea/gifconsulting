@@ -1,0 +1,7 @@
+En primer lugar debemos desactivar el debug de la base de datos poniendo la opción $db['default']['db_debug'] a FALSE 
+en el archivo /config/database.php.
+Después en nuestro método del modelo, tras el query a la BD podemos poner:
+if($data['error'] = $this->db->_error_message());
+return $data;
+En el controlador recogeremos esta variable devuelta y la pasaremos a la vista, 
+y en la parte de la vista que nos interese pondremos:
