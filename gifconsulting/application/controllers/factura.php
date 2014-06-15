@@ -20,6 +20,30 @@
 		}
 		
 		/**
+		 * Modifica una factura
+		 */
+		public function cambiaFactura(){
+			if($this->input->post('aceptar')){
+				if($this->form_validation->run() === false){
+					$this->load->model('factura_model');
+					$id = $this->input->post('id');
+					$deudor = $this->input->post('deudor');
+					$empresa = $this->input->post('empresa');
+					$num = $this->input->post('num');
+					$importe = $this->input->post('importe');
+					$pendiente = $this->input->post('pendiente');
+					$tipo = $this->input->post('tipo');
+					$fecha = $this->input->post('fecha');
+					$venci = $this->input->post('venci');
+					$cobro = $this->input->post('cobro');
+					$pago = $this->input->post('pago');
+					$estado = $this->input->post('estado');
+					$this->factura_model->modificaFactura($id,$deudor,$empresa,$num,$importe,$pendiente,$tipo,$fecha,$venci,$cobro,$pago,$estado);
+				}	
+			}
+		}
+		
+		/**
 		 * Muestra el filtro de facturas
 		 */
 		public function filtroVista(){
@@ -36,10 +60,6 @@
 			$query4 = $this->db->get('empresa');
 			$datos['empresa'] = $query4->result();
 			$this->load->view('filtro_vista',$datos);
-		}
-		
-		public function cambiaCiudad($provincia){
-			
 		}
 		
 		/**

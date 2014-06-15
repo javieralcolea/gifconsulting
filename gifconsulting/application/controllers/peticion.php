@@ -8,6 +8,9 @@
 			$this->load->library('form_validation');
 		}
 		
+		/**
+		 * Devuelve todas las líneas de gestión
+		 */
 		public function todasLasPeticiones(){
 			$this->load->model('peticion_model');
 			$peticion = $this->peticion_model->todasPeticiones();
@@ -15,6 +18,21 @@
 			$this->load->view('peticion_vista',$datos_peticion);
 		}
 		
+		/**
+		 * Devuelve todas las líneas de gestión de una factura concreta
+		 * $id: id de la factura
+		 */
+		public function todasPeticionesFactura($id){
+			$this->load->model('peticion_model');
+			$peticion = $this->peticion_model->peticionesFactura($id);
+			$datos_peticion = array('rs_peticion'=>$peticion);
+			$this->load->view('peticiones_factura_vista',$datos_peticion);
+		}
+		
+		/**
+		 * Muestra una línea de gestión
+		 * $id: id de la línea de gestión
+		 */
 		public function estaPeticion($id){
 			$this->load->model('peticion_model');
 			$peticion = $this->peticion_model->verPeticion($id);
@@ -22,6 +40,10 @@
 			$this->load->view('peticion_mod_vista',$datos_peticion);
 		}
 		
+		/**
+		 * Graba una línea de gestión
+		 * $idfactura: id de la factura a la que pertenece
+		 */
 		public function grabaPeticion($idfactura){
 			$this->load->view('peticion_graba_vista');
 			if($this->input->post('aceptar')){
@@ -38,6 +60,9 @@
 			}
 		}
 		
+		/**
+		 * Modifica una línea de gestión
+		 */
 		public function modificaPeticion(){
 			$this->load->view('peticion_mod_vista');
 			if($this->input->post('modificar')){
@@ -50,7 +75,7 @@
 					$hora = date('H:i:s');
 					$comentario = $this->input->post('comentario');
 					$solucionada = $this->input->post('solucionada');
-					$this->alarma_model->cambiaAlarma($id, $factura, $usuario, $fecha, $hora, $comentario, $solucionada);
+					$this->peticion_model->cambiaPeticion($id, $factura, $usuario, $fecha, $hora, $comentario, $solucionada);
 				}	
 			}
 		}	

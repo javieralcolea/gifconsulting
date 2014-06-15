@@ -33,6 +33,9 @@ header p{
 header b{
 	color: red;
 }
+header img{
+	float: left;
+}
 #campo1,#campo2,#campo6{
 	width: 25%;
 	float: left;
@@ -47,14 +50,15 @@ header b{
 	padding: 2em;
 	margin-left: 8em;
 }
-#campo4{
+#campo4,#campo7{
 	width: 85%;
 	float: left;
 	border: solid 1px #b20a93;
 	padding: 2em;
 	margin-left: 2em;
 }
-#campo4 table td label{
+#campo7 table td{
+	padding-left: 2em;
 }
 #campo5{
 	width: 70%;

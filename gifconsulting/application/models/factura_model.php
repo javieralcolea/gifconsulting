@@ -115,9 +115,8 @@
 		 * $id: identificador de la factura
 		 */
 		function estaFactura($id){
-			$query = "SELECT * FROM factura a, empresa b, deudor c, factura_usuario d, usuario e WHERE ".
-			"a.CIF_Empresa=b.CIF_Empresa AND a.CIF_Deudor= c.CIF_Deudor AND a.ID_Factura=d.ID_Factura AND ".
-			"d.ID_Usuario=e.ID_Usuario";
+			$query = "SELECT * FROM factura a, empresa b, deudor c WHERE a.CIF_Empresa=b.CIF_Empresa AND a.CIF_Deudor=c.CIF_Deudor ".
+			"AND a.ID_Factura='".$id."'";
 			return mysql_query($query);
 		}
 		
@@ -125,9 +124,9 @@
 		 * Graba una factura
 		 * $deudor,$empresa,$num,$importe,$pendiente,$tipo,$fecha,$venci,$cobro,$tipo,$estado
 		 */
-		function grabaFactura($deudor,$empresa,$num,$importe,$pendiente,$tipo,$fecha,$venci,$cobro,$tipo,$estado){
-			$fecha = date("Y-m-d");
-			$venci = date("Y-m-d");
+		function grabaFactura($deudor,$empresa,$num,$importe,$pendiente,$tipo,$fecha,$venci,$cobro,$pago,$estado){
+			$fecha = date_format($fecha, "Y-m-d");
+			$venci = date_ormat($venci, "Y-m-d");
 			$data = array(
 				'CIF_Deudor' => $deudor,
 				'CIF_Empresa' => $empresa,
@@ -138,7 +137,7 @@
 				'Fecha_Factura' => $fecha,
 				'Vencimiento_Factura' => $venci,
 				'Cobro_Factura' => $cobro,
-				'Tipo_Pago' => $tipo,
+				'Tipo_Pago' => $pago,
 				'Estado_Factura' => $estado
 			);
 			$this->db->insert('factura', $data);
@@ -148,9 +147,9 @@
 		 * Modifica una factura
 		 * $id,$deudor,$empresa,$num,$importe,$pendiente,$tipo,$fecha,$venci,$cobro,$tipo,$estado
 		 */
-		function modificaFactura($id,$deudor,$empresa,$num,$importe,$pendiente,$tipo,$fecha,$venci,$cobro,$tipo,$estado){
-			$fecha = date("Y-m-d");
-			$venci = date("Y-m-d");
+		function modificaFactura($id,$deudor,$empresa,$num,$importe,$pendiente,$tipo,$fecha,$venci,$cobro,$pago,$estado){
+			$fecha = date_format($fecha, "Y-m-d");
+			$venci = date_format($venci, "Y-m-d");
 			$data = array(
 				'ID_Factura' => $id,
 				'CIF_Deudor' => $deudor,
@@ -162,7 +161,7 @@
 				'Fecha_Factura' => $fecha,
 				'Vencimiento_Factura' => $venci,
 				'Cobro_Factura' => $cobro,
-				'Tipo_Pago' => $tipo,
+				'Tipo_Pago' => $pago,
 				'Estado_Factura' => $estado
 			);
 			$this->db->update('factura',$data,array('ID_Factura'=> $id));
@@ -173,8 +172,8 @@
 		 * $num,$fecha,$venci,$importe,$tipo
 		 */
 		function modificaDesdeExcel($num,$fecha,$venci,$importe,$tipo){
-			$fecha = date("Y-m-d");
-			$venci = date("Y-m-d");
+			$fecha = date_format($fecha, "Y-m-d");
+			$venci = date_format($venci, "Y-m-d");
 			$data = array(
 				'Numero_Factura' => $num,
 				'Importe_Factura' => $importe,
